@@ -1,0 +1,6 @@
+function f(x: integer): integer
+{
+  var y: integer;
+  y = x # 2;
+  return y & 1;
+}

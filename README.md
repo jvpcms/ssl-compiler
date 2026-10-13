@@ -1,5 +1,8 @@
 # Analisador Léxico — Simple Script Language
 
+> A continuação (VF: análise sintática, de escopo e de tipos) está em
+> [`compilador/`](compilador/README.md) e reaproveita este analisador léxico.
+
 Analisador léxico em Python (sem dependências externas) para a gramática da
 disciplina de Compiladores (Prof. Luiz Guedes, IME). Implementa o projeto
 descrito na apostila:
@@ -29,7 +32,8 @@ s      = '"' . any* . '"'                   -> STRINGVAL (idem)
 ```
 
 Palavras reservadas: `array boolean break char continue do else false function
-if integer of string struct true type var while`.
+if integer of return string struct true type var while` (`return` foi
+acrescentada na VF; ver `compilador/README.md`).
 
 Símbolos: `: ; , = [ ] { } ( ) && || < > <= >= != == + ++ - -- * / . !`.
 

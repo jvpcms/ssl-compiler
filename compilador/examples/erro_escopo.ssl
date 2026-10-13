@@ -1,0 +1,20 @@
+type par = struct { a: integer; a: char }
+
+function f(x: integer, x: integer): integer
+{
+  var x, y: integer;
+  y = z;
+  {
+    var y: boolean;
+    y = w;
+  }
+  break;
+  return y;
+}
+
+function f(n: integer): integer
+{
+  var m: integer;
+  m = g(n);
+  return m;
+}

@@ -1,0 +1,40 @@
+type vetor = array [10] of integer
+type ponto = struct { x, y: integer; nome: string }
+type linha = struct { a, b: ponto }
+type caminho = array [5] of linha
+type texto = string
+type inteiro = integer
+
+function dist(p: ponto, q: ponto): inteiro
+{
+  var dx, dy: integer;
+  dx = p.x - q.x;
+  dy = p.y - q.y;
+  return dx * dx + dy * dy;
+}
+
+function inicial(t: texto): char
+{
+  var c: char;
+  c = t[0];
+  return c;
+}
+
+function teste(c: caminho, v: vetor, s: texto): boolean
+{
+  var ok: boolean;
+  var n: inteiro;
+  var k: string;
+  n = dist(c[0].a, c[1].b) + v[2];
+  c[4].b.nome = s + "!";
+  k = c[4].b.nome;
+  n = n / 2;
+  ok = ok == false;
+  ok = inicial(k) == 'o' || !(n >= 0) && true;
+  do {
+    var n: boolean;
+    n = ok;
+    if (n) continue; else break;
+  } while (ok);
+  return ok && v[0] != --n;
+}

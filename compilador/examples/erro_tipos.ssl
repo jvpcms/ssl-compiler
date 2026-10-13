@@ -1,0 +1,28 @@
+type vetor = array [3] of integer
+type ponto = struct { x, y: integer }
+
+function f(a: integer, s: string): boolean
+{
+  var v: vetor;
+  var p: ponto;
+  var b: boolean;
+  var t: a;
+  b = 1;
+  if (a) b = true;
+  while ("x") b = false;
+  v[true] = 1;
+  p.z = 2;
+  a.x = 3;
+  a[0] = 4;
+  b = a && b;
+  a = s - 1;
+  a = -b;
+  b = !a;
+  a = b++;
+  f = b;
+  a = a(1);
+  b = f(1);
+  b = f(1, "x", 2);
+  b = f("x", 1);
+  return 0;
+}

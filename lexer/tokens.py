@@ -25,53 +25,54 @@ class TokenKind(IntEnum):
     IF = 9
     INTEGER = 10
     OF = 11
-    STRING = 12
-    STRUCT = 13
-    TRUE = 14
-    TYPE = 15
-    VAR = 16
-    WHILE = 17
+    RETURN = 12             # extensão da VF (ver compilador/README.md)
+    STRING = 13
+    STRUCT = 14
+    TRUE = 15
+    TYPE = 16
+    VAR = 17
+    WHILE = 18
     # ---- símbolos ----
-    COLON = 18              # :
-    SEMI_COLON = 19         # ;
-    COMMA = 20              # ,
-    EQUALS = 21             # =
-    LEFT_SQUARE = 22        # [
-    RIGHT_SQUARE = 23       # ]
-    LEFT_BRACES = 24        # {
-    RIGHT_BRACES = 25       # }
-    LEFT_PARENTHESIS = 26   # (
-    RIGHT_PARENTHESIS = 27  # )
-    AND = 28                # &&
-    OR = 29                 # ||
-    LESS_THAN = 30          # <
-    GREATER_THAN = 31       # >
-    LESS_OR_EQUAL = 32      # <=
-    GREATER_OR_EQUAL = 33   # >=
-    NOT_EQUAL = 34          # !=
-    EQUAL_EQUAL = 35        # ==
-    PLUS = 36               # +
-    PLUS_PLUS = 37          # ++
-    MINUS = 38              # -
-    MINUS_MINUS = 39        # --
-    TIMES = 40              # *
-    DIVIDE = 41             # /
-    DOT = 42                # .
-    NOT = 43                # !
+    COLON = 19              # :
+    SEMI_COLON = 20         # ;
+    COMMA = 21              # ,
+    EQUALS = 22             # =
+    LEFT_SQUARE = 23        # [
+    RIGHT_SQUARE = 24       # ]
+    LEFT_BRACES = 25        # {
+    RIGHT_BRACES = 26       # }
+    LEFT_PARENTHESIS = 27   # (
+    RIGHT_PARENTHESIS = 28  # )
+    AND = 29                # &&
+    OR = 30                 # ||
+    LESS_THAN = 31          # <
+    GREATER_THAN = 32       # >
+    LESS_OR_EQUAL = 33      # <=
+    GREATER_OR_EQUAL = 34   # >=
+    NOT_EQUAL = 35          # !=
+    EQUAL_EQUAL = 36        # ==
+    PLUS = 37               # +
+    PLUS_PLUS = 38          # ++
+    MINUS = 39              # -
+    MINUS_MINUS = 40        # --
+    TIMES = 41              # *
+    DIVIDE = 42             # /
+    DOT = 43                # .
+    NOT = 44                # !
     # ---- tokens regulares (classes infinitas: precisam de token secundário) ----
-    CHARACTER = 44          # c  = ''' . any . '''
-    NUMERAL = 45            # n  = digito . digito*
-    STRINGVAL = 46          # s  = '"' . any* . '"'
-    ID = 47                 # Id = letra . (letra + digito)*
+    CHARACTER = 45          # c  = ''' . any . '''
+    NUMERAL = 46            # n  = digito . digito*
+    STRINGVAL = 47          # s  = '"' . any* . '"'
+    ID = 48                 # Id = letra . (letra + digito)*
     # ---- fim de arquivo e desconhecido ----
-    EOF = 48
-    UNKNOWN = 49
+    EOF = 49
+    UNKNOWN = 50
 
 
 # Vetor de palavras reservadas ORDENADO. KEYWORDS[i] corresponde a TokenKind(i).
 KEYWORDS: tuple[str, ...] = (
     "array", "boolean", "break", "char", "continue", "do", "else", "false",
-    "function", "if", "integer", "of", "string", "struct", "true", "type",
+    "function", "if", "integer", "of", "return", "string", "struct", "true", "type",
     "var", "while",
 )
 
